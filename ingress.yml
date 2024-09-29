@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myingress
+  namespace: dev
+  labels:
+    name: myingress
+    kcert.dev/ingress: managed
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - test.abhi.thoughtbrains.com
+      secretName: test-abhi-thoughtbrains-com
+  rules:
+  - host: test.abhi.thoughtbrains.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: myapp
+            port: 
+              number: 80

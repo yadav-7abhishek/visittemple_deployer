@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: quizapp-ingress
+  name: visittemple-ingress
   labels:
     kcert.dev/ingress: "managed"
 spec:

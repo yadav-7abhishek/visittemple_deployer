@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: visittemple
+spec:
+  selector:
+    matchLabels:
+      app: visittemple
+  template:
+    metadata:
+      labels:
+        app: visittemple
+    spec:
+      containers:
+      - name: visittemple
+        image: abhishekcloud/visittemple:0.0.2-SNAPSHOT
+        ports:
+        - containerPort: 8080

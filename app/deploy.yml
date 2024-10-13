@@ -13,6 +13,7 @@ spec:
     spec:
       containers:
       - name: visittemple
-        image: abhishekcloud/visittemple:0.0.2-SNAPSHOT
+        image: us-central1-docker.pkg.dev/devops-353009/devops-docker/visittemple:0.0.2-SNAPSHOT
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
